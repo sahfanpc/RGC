@@ -1,0 +1,37 @@
+<main class="mt-5 pt-3 adduser-pop">
+<div class="row">
+    <div class="col-md-4 fs-2 fw-bold"></div>
+    <div class="col-md-6 p-1 " style="height:35rem">
+        <section class="main1">
+            <aside class="container">
+                <aside class="right-section">
+                    <form [formGroup]="addform" action="" class="addpage">
+                       
+                            <label for="">Name:</label>
+                            <input type="text" placeholder="Name" class="input" formControlName="name" [(ngModel)]="name">
+                        
+                            <label for="">DOB:</label>
+                            <input type="date" placeholder="Date Of Birht" class="input" formControlName="dob" [(ngModel)]="dob">
+                       
+                            <label for="">Email:</label>
+                            <input type="email" placeholder="Email" class="input" formControlName="email" [(ngModel)]="email">
+                        
+                            <label for="">Numbar:</label>
+                            <input type="number" placeholder="Number" class="input" formControlName="number" [(ngModel)]="number">
+   
+                            <label for="">Sex:</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="sex" [(ngModel)]="sex">
+                                <option selected>Sex</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                              </select>
+
+                      
+                        <input class="btn btn-primary mt-3" type="add" value="ADD" (click)="Add(addform.value)">
+                    </form>
+                </aside>
+            </aside>
+        </section>
+    </div>
+</div>
+</main>

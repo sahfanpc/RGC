@@ -1,0 +1,98 @@
+/* *{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} */
+.main{
+margin: 0;
+padding: 0;
+background-color: #1f74ba3d;
+}
+.container{
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.section-grp{
+    width: 50rem;
+    height: 35rem;
+    /* background-color: antiquewhite; */
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: .5rem;
+    background-color: white;
+    overflow: hidden;
+}
+.left-section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+    background-image: url("../../assets/back1 (1).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    }
+    .left-text{
+        color: rgba(255, 255, 255, 0.575);
+        font-size: 4rem;
+        /* text-align: center; */
+        font-weight: 600;
+        /* animation-name: slideInLeft; */
+        /* width: 100%; */
+        animation: slideInLeft 5s ease-in .3s normal both;
+    }
+.right-section{
+width: 50%;
+/* background-color: aqua; */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.loginpage{
+    /* background-color:blanchedalmond ; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+gap: 2rem;
+padding: 1rem;
+}
+.head{
+font-weight: 700;
+position: relative;
+top: -1.5rem;
+}
+input{
+    border-radius: .3rem;
+    padding: .6rem;
+    font-size: 1.2rem;
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    outline: none;
+    font-weight: 400;
+    width: 20rem;
+}
+.text-link{
+    position: relative;
+    top: 1rem;
+}
+input::placeholder{
+    color:rgba(128, 128, 128, 0.788);
+}
+a{
+    text-decoration: none;
+}
+
+
+
+@keyframes slideInLeft {
+   from {
+        transform: translateX(-50px);
+       }
+       to {
+         transform: translateX(80px);
+       }
+     }
+    
+   

@@ -1,0 +1,23 @@
+<section class="main">
+    <aside class="container">
+        <aside class="right-section">
+            <form [formGroup]="registerform" action="" class="registerpage">
+                <h1 class="head">Register</h1>
+                <input type="text" placeholder="Name" class="input" formControlName="name">
+                <input type="date" placeholder="Date Of Birht" class="input" formControlName="dob">
+                <input type="email" placeholder="Email" class="input" formControlName="email">
+                <input type="number" placeholder="Number" class="input" formControlName="number">
+                <aside class="genter-sec">
+                <span class="genter-sec-text">Sex:</span>
+                <select class="form-select" aria-label="Default select example" formControlName="sex">
+                    <option selected>Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </aside>
+                <input type="password" placeholder="password" class="input" formControlName="password">
+                <input class="btn btn-primary" type="submit" value="Submit" (click)="Register(registerform.value)">
+            </form>
+        </aside>
+    </aside>
+</section>

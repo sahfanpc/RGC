@@ -1,0 +1,199 @@
+<section class="main-container">
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-primary fixed-top">
+    <div class="container-fluid">
+        <!-- offcanvas-trigger -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+          </button>
+          <!--  -->
+      <a class="navbar-brand fw-bold text-uppercase me-auto" href="#"><img src="../../assets/bussiness-icon (2).jpg"width="30rem" alt="" class="img-icon"><span>Tagline</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto nav-right-grp">
+            <div class="input-group my-3 my-lg-0 ">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+              </div>
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle p-0 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-fill fs-3 text-light"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><button class="dropdown-item" [routerLink]="['/']" type="button">Login</button></li>
+                  <li><button class="dropdown-item" [routerLink]="['/user-register']" type="button">Register</button></li>
+                </ul>
+              </div>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+  <!--  -->
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-start bg-light text-dark sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    
+    <div class="offcanvas-body  p-2">
+        <nav class="navbar-light">
+            <ul class="navbar-nav">
+                <li>
+                    <div class=" small fw-bold text-uppercase px-3 py-1 fs-5">
+                        CORE
+                    </div>
+                </li>
+                <li>
+                    <aside (click)="closeDialog()" class="nav-link px-3 active border-design">
+                      <span class="material-icons-round">
+                            grid_view
+                            </span>
+                        <span>Dashboard</span>
+                    </aside>
+                </li>
+                
+                <li>
+                    <aside (click)="openDialog()" class="nav-link px-3  active border-design">
+                        <span class="material-icons-round">
+                            person_add
+                            </span>
+                        <span class="border-text">ADD USER</span>
+                    </aside>
+                   
+                    <a  class="nav-link px-3  active border-design">
+                        <span class="material-icons-round">
+                            logout
+                            </span>
+                        <span  [routerLink]="['/']" class="border-text">LOGOUT</span>
+                    </a>
+                   
+            </ul>
+
+        </nav>
+      
+    </div>
+  </div>
+  <!--  -->
+  <!-- main -->
+  <main class="mt-5 pt-3" *ngIf="backcontent">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 fw-bold fs-4">
+                Dashboard
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3 p-1 card-style" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <aside class="card-img"><i class="bi bi-person-fill card-img-icon"></i></aside>
+                      <aside class="card-text"> <p class="card-text fs-5  m-0">Active Users</p><span class="fs-3 fw-bold">68</span></aside>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 p-1 card-style" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <aside class="card-img"><i class="bi bi-person-fill card-img-icon"></i></aside>
+                      <aside class="card-text"> <p class="card-text fs-5  m-0">Total Users</p><span class="fs-3 fw-bold">55</span></aside>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3 p-1 card-style" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <aside class="card-img"><i class="bi bi-person-fill card-img-icon"></i></aside>
+                      <aside class="card-text"> <p class="card-text fs-5  m-0">New Users</p><span class="fs-3 fw-bold">40</span></aside>
+                    </div>
+                  </div>
+            </div>
+            
+        
+        </div>
+        <div class="row">
+<!-- <div class="col-md-12"> -->
+    <div class="card text-bg-light mb-3 p-0" >
+        <div class="card-header">User TableData</div>
+        <div class=" table-body-height p-0">
+                    <table border="1" width="100%" class="table text-light" >
+                    <thead cellspacing="10" class="thead-style">
+                    <tr >
+                        <th scope="col">Sl.No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">email</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Sex</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of array;let i=index;">
+                  
+                    <tr class="p-1 text-dark">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.dob}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.number}}</td>
+                        <td>{{item.sex}}</td>
+                        <td class="edit-delete"><aside (click)="editUser(i)" class="material-icons-round editicon" style="color: rgb(19, 112, 173)">
+                            border_color
+                        </aside><aside (click)="deleteUser(i)" class="material-icons-round deleteicon" style="color: rgb(19, 112, 173)">
+                                delete
+                        </aside></td>
+                    </tr>
+                
+                </tbody>
+                </table>
+                <!-- </div> -->
+                
+            <!-- </canvas> -->
+        </div>
+      </div>
+<!-- </div> -->
+        </div>
+    </div>
+  </main>
+  <main class="mt-5 pt-3 adduser-pop" *ngIf="adduserpop" >
+    <div class="row">
+        <div class="col-md-3 fs-3 fw-bold add-user-style">Add Userdata</div>
+        <div class="col-md-6 p-1 " style="height:35rem">
+            <section class="main1 ">
+                <aside class="container">
+                    <aside class="right-section bg-light">
+                        <form [formGroup]="addform" action="" class="addpage">
+                       
+                                <label for="">Name:</label>
+                                <input type="text" placeholder="Name" class="input" formControlName="name">
+                            
+                                <label for="">DOB:</label>
+                                <input type="date" placeholder="Date Of Birht" class="input" formControlName="dob">
+                          
+                                <label for="">Email:</label>
+                                <input type="email" placeholder="Email" class="input" formControlName="email">
+                            
+                                <label for="">Numbar:</label>
+                                <input type="number" placeholder="Number" class="input" formControlName="number">
+                           
+                                <label for="">Sex:</label>
+                                <select class="form-select" aria-label="Default select example" formControlName="sex">
+                                    <option selected>Sex</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                  </select>
+                               
+                                <label for="">Password:</label>
+                                <input type="password" placeholder="password" class="input adduser-input" formControlName="password">
+                            
+
+                          
+                            <input class="btn btn-primary mt-3" type="add" value="ADD" (click)="Add(addform.value)">
+                        </form>
+                    </aside>
+                </aside>
+            </section>
+        </div>
+    </div>
+  </main>
+</section>

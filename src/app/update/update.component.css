@@ -1,0 +1,31 @@
+.right-section{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    /* margin-top: 2rem; */
+    width: 20rem;
+    height: 27rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: .5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.addpage{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    border-radius: .3rem;
+    padding: .4rem;
+    font-size: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    outline: none;
+    font-weight: 400;
+    width: 15rem;
+}
+input::placeholder{
+    color:rgba(128, 128, 128, 0.788);
+}

@@ -1,0 +1,69 @@
+/* *{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} */
+.main{
+    margin: 0;
+    padding: 0;
+    background-color: #1f74ba3d;
+    }
+    .container{
+        
+        height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .right-section{
+        width: 25rem;
+        height: 38rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    }
+    .genter-sec{
+        display: flex;
+        align-items: center;
+    }
+    .genter-sec-text{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .form-select{
+        padding: .8rem;
+    }
+    .registerpage{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    
+    }
+    .head{
+    font-weight: 700;
+    position: relative;
+    top: -1.5rem;
+    }
+    .input{
+        border-radius: .3rem;
+        padding: .6rem;
+        font-size: 1.2rem;
+        border: 1px solid rgba(128, 128, 128, 0.397);
+        outline: none;
+        font-weight: 400;
+        width: 20rem;
+    }
+    input::placeholder{
+        color:rgba(128, 128, 128, 0.788);
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn{
+position: relative;
+top: 1rem;
+padding: .6rem 0;
+    }
